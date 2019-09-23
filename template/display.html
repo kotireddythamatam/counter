@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>display</title>
+    <style media="screen">
+      .display{
+        border: 1px blue solid;
+        border-radius: 5px;
+        margin: 10% 40%;
+        text-align: center;
+        background-color: lightyellow;
+      }
+    </style>
+  </head>
+  <body bgcolor="lightblue">
+    <div class="display">
+      <h2>Coount and Date/Time</h2>
+    <table border="1">
+      <tr>
+        <th>Count</th>
+        <th>Execution date&time</th>
+      </tr>
+      {% for data in model_obj %}
+      <tr>
+        <td>{{ data.Counter}}</td>
+        <td>{{ data.datetime}}</td>
+      </tr>
+      {% endfor %}
+    </table></br>
+    <a href="./login">Click here to insert another record</a>
+    </div>
+  </body>
+</html>
